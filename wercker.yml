@@ -9,7 +9,7 @@ build:
     # A step that executes `npm install` command
     - npm-install
     # A step that executes `bower install` command
-    - plasticine/bower-install
+    - hgen/bower-install
 
     - hgen/gulp:
         tasks: sass
