@@ -1,0 +1,15 @@
+box: nodesource/trusty
+
+# Build definition
+build:
+  # The steps that will be executed on build
+  steps:
+    - script:
+        code: export NODE_ENV='testing'
+    # A step that executes `npm install` command
+    - npm-install
+    # A step that executes `bower install` command
+    - bower-install
+
+    - hgen/gulp:
+        tasks: sass
