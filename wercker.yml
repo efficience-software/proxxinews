@@ -9,7 +9,12 @@ build:
     # A step that executes `npm install` command
     - npm-install
     # A step that executes `bower install` command
-    - bower-install
+    - plasticine/bower-install
 
     - hgen/gulp:
         tasks: sass
+
+deploy :
+  steps :
+    - lukevivier/gh-pages:
+        token: $GIT_TOKEN
