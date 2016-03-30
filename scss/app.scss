@@ -1,6 +1,7 @@
 @charset 'utf-8';
 
 @import 'settings';
+@import 'mixins';
 @import 'foundation';
 @import 'motion-ui';
 
@@ -41,3 +42,49 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    @include background-cover();
+    background-position: center;
+    background-image: url('../img/header.jpg');
+    text-align: center;
+    color: white;
+
+    .header-content {
+        position: relative;
+        text-align: center;
+        padding: 100px 15px 100px;
+        width: 100%;
+    }
+    @media (min-width: 768px) {
+        min-height: 100%;
+        .header-content {
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            padding: 0 50px;
+            .header-content-inner {
+                max-width: 1000px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+footer {
+  padding-top: 3rem;
+}
