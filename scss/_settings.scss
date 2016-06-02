@@ -42,7 +42,7 @@
 
 // 1. Global
 // ---------
-
+$global-flexbox: true;
 $global-width: rem-calc(1200);
 $global-font-size: 100%;
 $global-lineheight: 1.5;
@@ -58,14 +58,14 @@ $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: "Montserrat", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: "Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $text-direction: ltr;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-margin: 1rem;
-$global-weight-normal: 400;
-$global-weight-bold: 700;
+$global-weight-normal: 300;
+$global-weight-bold: 400;
 $global-radius: 0;
 $global-text-direction: ltr;
 $rem-base: 16px;
@@ -94,21 +94,21 @@ $block-grid-max: 6;
 // ------------------
 
 $header-font-family: $body-font-family;
-$header-font-weight: $global-weight-bold;
+$header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 $header-sizes: (
   small: (
     'h1': 24,
-    'h2': 12,
+    'h2': 20,
     'h3': 19,
     'h4': 18,
     'h5': 17,
     'h6': 16,
   ),
   medium: (
-    'h1': 36,
-    'h2': 18,
+    'h1': 48,
+    'h2': 40,
     'h3': 31,
     'h4': 25,
     'h5': 20,
