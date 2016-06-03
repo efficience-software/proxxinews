@@ -1,7 +1,7 @@
 {
-  "name": "foundation-sites-template",
+  "name": "proxxinews",
   "version": "1.0.0",
-  "description": "Basic template for a new Foundation for Sites project.",
+  "description": "proxxinews website.",
   "main": "gulpfile.js",
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -16,13 +16,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zurb/foundation-sites-template.git"
+    "url": "https://github.com/efficience-software/proxxinews.git"
   },
   "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
-    "email": "foundation@zurb.com"
+    "url": "https://github.com/efficience-software/proxxinews/issues",
+    "email": "contact@efficiencesoftware.fr"
   },
-  "author": "ZURB <foundation@zurb.com>",
+  "author": "SANIMATION <contact@efficiencesoftware.fr>",
   "license": "MIT",
   "private": true
 }
