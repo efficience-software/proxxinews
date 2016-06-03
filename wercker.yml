@@ -6,15 +6,17 @@ build:
   steps:
     - script:
         code: export NODE_ENV='testing'
+    - script:
+        name: install bower
+        code: sudo npm install -g bower
     # A step that executes `npm install` command
     - npm-install
-    # A step that executes `bower install` command
-    - olger/yeoman-bower-install@0.5.3
 
     - hgen/gulp:
-        tasks: sass
+        tasks: build
 
 deploy :
   steps :
     - lukevivier/gh-pages:
         token: $GIT_TOKEN
+        basedir: build
