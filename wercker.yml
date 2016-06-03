@@ -14,7 +14,7 @@ build:
 
     - script:
         name: bower install
-        code: sudo bower install
+        code: bower install
 
     - hgen/gulp:
         tasks: build
