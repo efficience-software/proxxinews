@@ -6,15 +6,20 @@ build:
   steps:
     - script:
         code: export NODE_ENV='testing'
+    # Configure npm and bower to allow root scripts
+    - script:
+        name: enable root/sudo for npm/bower
+        code: |
+          # https://docs.npmjs.com/misc/config#unsafe-perm
+          npm config set unsafe-perm true
+          # https://github.com/bower/bower/issues/1752#issuecomment-113455403
+          echo "{\"allow_root\": true}" > ~/.bowerrc
+
     - script:
         name: install bower
         code: sudo npm install -g bower
     # A step that executes `npm install` command
     - npm-install
-
-    - script:
-        name: bower install
-        code: bower install
 
     - hgen/gulp:
         tasks: build
